@@ -1,13 +1,13 @@
 ## cselab
-## Programming Assignment 1 2018 for Computer System Engineering
+## 2018 Programming Assignment 1 for Computer System Engineering
 Author: Tan Yi Long, Cindy Ong Wen Ling
 ID: 1001566, 1001792
 Date: 4th March 2018
 
-Purpose of Program:
+### Purpose of Program:
 Program enables users to construct a directed acyclic graph (DAG) of user programs from the input text file.
 
-How to compile Programe:
+### How to compile Programe:
 1. Download the code on github and save it into a folder of your choice.
 2. On the command line, navigate to your folder e.g. cd /workspace/cseProgAssign/src
 3. Under "ProcessManagement.java" file, change the input file to any file you are interested in running the program on e.g. "graph-textfile1.txt"
@@ -16,7 +16,7 @@ How to compile Programe:
 4.2.2 Enter "java ProcessManagement"
 5. The command line should output the output text files when the program is completed.
 
-What exactly the program does:
+### What exactly the program does:
 1) The program parses in a file to generate a ProcessGraph
 
 2) User views information of the ProcessGraph that is printed out
