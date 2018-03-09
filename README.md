@@ -10,7 +10,7 @@ Program enables users to construct a directed acyclic graph (DAG) of user progra
 ### How to compile Programe:
 1. Download the code on github and save it into a folder of your choice.
 2. On the command line, navigate to your folder e.g. cd /workspace/cseProgAssign/src
-3. Under "ProcessManagement.java" file, change the input file to any file you are interested in running the program on e.g. "graph-textfile1.txt"
+3. Under "ProcessManagement.java" file, change the input file to any file you are interested in running the program on e.g. "graph-textfile1.txt" if you prefer to change in the code rather than input through the command line
 (For IDE e.g. Eclipse)
 4. (For IDE e.g. Eclipse) Click "run" and the program should run.
 (For Linux)
