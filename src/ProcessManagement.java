@@ -13,28 +13,29 @@ public class ProcessManagement {
 	//set the working directory
 	private static File currentDirectory=new File(System.getProperty("user.dir"));
     //set the instructions file
-    private static File instructionSet = new File("graph-file1.txt");
+    private static File instructionSet;
     private static int totalNumberOfNodesExecuted=0;
     private static boolean allAreExecuted=false;
 
     public static void main(String[] args) throws InterruptedException {
 
     	//checks for input text file by user on the command line
-    	if(args.length!=0)
-    	{
+    	if(args.length==1){
     		instructionSet=new File(args[0]);
     		//parse the instruction file and construct a data structure, stored inside ProcessGraph class
     		ParseFile.generateGraph(new File(instructionSet.getAbsolutePath()));
     	}
     	else if (args.length==0){
-    		 //parse the instruction file and construct a data structure, stored inside ProcessGraph class
-        	ParseFile.generateGraph(new File(currentDirectory.getAbsolutePath() + "/"+instructionSet));
-    		
+            //error message to be printed 
+            System.out.println("Error: Please input a graph file for testing");
     	}
+        else {
+            //error message to be printed 
+            System.out.println("Error: Detected multiple inputs. Please use a single graph file for input");
+        }
       
     	// Print the graph information
         ProcessGraph.printGraph();
-     
         
         //check the number of nodes that have been executed
         for(ProcessGraphNode node: ProcessGraph.nodes)
@@ -98,6 +99,12 @@ public class ProcessManagement {
         System.out.println("All process finished successfully");
     }
    
+
+    /**
+    * Executes the node if data/control dependencies are satisfied
+    * @param node - node to be executed
+    * @return void
+    */
     public static void ExecuteProcess(ProcessGraphNode node) 
     {
     	//check if we are running the code on Windows or in Linux as in this case when the testing of code was done
