@@ -3,7 +3,6 @@
  */
 
 
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -59,11 +58,12 @@ public class ParseFile {
 
                 index++;
             }
-
+           
             for (int i = 0; i < edgeParents.size(); i++) {
                 int p = edgeParents.get(i);
                 int c = edgeChildren.get(i);
                 ProcessGraph.nodes.get(p).addChild(ProcessGraph.nodes.get(c));
+                ProcessGraph.nodes.get(c).addParent(ProcessGraph.nodes.get(p));
             }
 
         } catch (Exception e){
