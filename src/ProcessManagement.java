@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 public class ProcessManagement {
 
 	//set the working directory
-	private static File currentDirectory=new File("/home/cindy/workspace/cseProgAssign/src");
+	private static File currentDirectory=new File(System.getProperty("user.dir"));
     //set the instructions file
     private static File instructionSet = new File("graph-file1.txt");
     private static int totalNumberOfNodesExecuted=0;

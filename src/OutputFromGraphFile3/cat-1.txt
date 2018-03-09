@@ -1,0 +1,6 @@
+  PID TTY           TIME CMD
+48109 ttys000    0:00.71 -bash
+48634 ttys000    0:00.38 /usr/bin/java ProcessManagement graph-file3
+48637 ttys000    0:00.01 sleep 1
+48639 ttys000    0:00.01 (sh)
+48640 ttys000    0:00.00 (jspawnhelper)
